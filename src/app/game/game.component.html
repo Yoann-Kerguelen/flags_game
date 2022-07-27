@@ -1,0 +1,20 @@
+<div class="container body">
+    <h1>Devinez les capitales selon le nom du pays et son drapeau</h1>
+    <div class="country" *ngFor="let country of countries">
+        <h4>{{ country.name | titlecase }}</h4>
+        <div class="row">
+            <div class="col-sm-12">
+                <img [src]="country.flag">
+            </div>
+        </div>
+        <form class="form-country" (ngSubmit)="validateForm()" [formGroup]="countryCapitalForm">
+            <div class="form-group space">
+                <input type="text" class="form-control" id="countryCapital" name="countryCapital"
+                    aria-describedby="countryName" placeholder="Entrer le nom de la capitale" formControlName="Capital">
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-6">
+        Score : {{ score }} / 10
+    </div>
+</div>

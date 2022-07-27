@@ -1,0 +1,25 @@
+<div class="container body">
+    <div class="country">
+        <h1 class="text-center">Ajouter un pays</h1>
+        <div class="text-center">
+            <form [formGroup]="countryForm" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                    <div class="mb-3 row">
+                        Nom du pays <input class="form-control" type="text" formControlName="name">
+                        Drapeau <input class="form-control" type="text" formControlName="flag">
+                        Capitale <input class="form-control" type="text" formControlName="capital">
+                        Population <input class="form-control" type="number" formControlName="population">
+                        Monnaie <input class="form-control" type="text" formControlName="currency">
+                        Zone <input class="form-control" type="text" formControlName="area">
+                    </div>
+                </div>
+                <div>
+                    <div [hidden]="!countryForm.invalid" class="alert alert-danger">
+                        Le formulaire est mal remplis !
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Ajouter" [disabled]="countryForm.invalid">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

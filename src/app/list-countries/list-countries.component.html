@@ -1,0 +1,17 @@
+<div class="container body">
+  <h1>Voyage, voyage</h1>
+  <div class="country" *ngFor="let country of countries">
+    <h4>{{ country.name | titlecase }}</h4>
+    <div class="row">
+      <div class="col-sm-12">
+        <img [src]="'assets/flags/' + country.flag" (error)="onImgError($event,country.flag)"
+          (click)="goToCountry(country.name)">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p>Région : {{ country.area }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container body">
+  <div class="country">
+    <h4>{{ country?.name | titlecase }}</h4>
+    <div class="row">
+      <div class="col-sm-6">
+        <p class="capital">Capitale : {{ country.capital | titlecase }}</p>
+      </div>
+      <div class="col-sm-6">
+        <img [src]="'assets/flags/' + country.flag" (error)="onImgError($event,country.flag)">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <p>Nombre d'habitants : {{ country.population }}</p>
+      </div>
+      <div class="col-sm-6">
+        <p>Monnaie : {{ country.currency }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p>Région : {{ country.area }}</p>
+      </div>
+    </div>
+  </div>
+</div>
