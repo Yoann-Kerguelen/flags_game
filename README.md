@@ -1,5 +1,7 @@
 # Flags game
 
+![alt text](https://repository-images.githubusercontent.com/518392800/8df77810-171c-4579-b904-70a7ccbec079)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
 
 ## Development server
